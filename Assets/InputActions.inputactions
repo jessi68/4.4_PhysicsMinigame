@@ -1,0 +1,50 @@
+{
+    "name": "InputActions",
+    "maps": [
+        {
+            "name": "New action map",
+            "id": "8a39d33c-4e12-467a-ac3c-b632be26e494",
+            "actions": [
+                {
+                    "name": "Up",
+                    "type": "Button",
+                    "id": "9d61c63b-e8ca-4db1-a3e7-fc0f33816105",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "cb6253f7-e1d6-4e79-bdd0-1596a6848205",
+                    "path": "<Keyboard>/upArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "New control scheme",
+                    "action": "Up",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": [
+        {
+            "name": "New control scheme",
+            "bindingGroup": "New control scheme",
+            "devices": [
+                {
+                    "devicePath": "<Keyboard>",
+                    "isOptional": false,
+                    "isOR": false
+                },
+                {
+                    "devicePath": "<Mouse>",
+                    "isOptional": false,
+                    "isOR": false
+                }
+            ]
+        }
+    ]
+}
