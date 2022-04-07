@@ -97,7 +97,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82709d4f5089aa9499b5c235a4bdb678, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  score: 10
+  centerBall: {fileID: 4744770356124370292, guid: 162bd7e646d9efc43b165a28fc3d4b8a, type: 3}
 --- !u!1 &7341950896755038674
 GameObject:
   m_ObjectHideFlags: 0

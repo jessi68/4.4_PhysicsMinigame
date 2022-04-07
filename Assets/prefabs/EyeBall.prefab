@@ -93,6 +93,7 @@ GameObject:
   - component: {fileID: 6969064954170738865}
   - component: {fileID: 4257294590364382204}
   - component: {fileID: 6806477615653695746}
+  - component: {fileID: 8967263318246512668}
   m_Layer: 0
   m_Name: EyeBall
   m_TagString: Untagged
@@ -165,3 +166,16 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &8967263318246512668
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2539113821616047929}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82709d4f5089aa9499b5c235a4bdb678, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  centerBall: {fileID: 4744770356124370292, guid: 162bd7e646d9efc43b165a28fc3d4b8a, type: 3}
