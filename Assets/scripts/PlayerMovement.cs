@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Threading;
 using System.Collections.Generic;
 using UnityEngine.InputSystem;
 using UnityEngine;
@@ -8,6 +9,10 @@ public class PlayerMovement : MonoBehaviour
     
     private InputActions inputActions;
     private Rigidbody rigidBody;
+    private float ROTATION_VALUE = (float) 0.2;
+    private Vector3 leftRotateVector = new Vector3((float) 2, 0, (float) 2);
+    private Vector3 rightRotateVector = new Vector3((float) -2, 0, (float) -2);
+    private string rotationMode = "left";
 
     private int totalScore = 0;
     [SerializeField] private float speed = 1000f;
@@ -24,8 +29,39 @@ public class PlayerMovement : MonoBehaviour
     {
       
         Vector2 moveInput = inputActions.Newactionmap.Movement.ReadValue<Vector2>();
-        Debug.Log(moveInput);
         rigidBody.velocity = moveInput * speed;
+
+    }
+
+    private void Update()
+    {
+        Debug.Log(transform.rotation);
+
+        if(transform.rotation.x > ROTATION_VALUE && rotationMode == "left")
+        {
+            rotationMode = "right";
+        }
+
+        if(transform.rotation.x  < -1 * ROTATION_VALUE && rotationMode == "right")
+        {
+            rotationMode = "leftToOrigin";
+        }
+
+        if(Mathf.Abs(transform.rotation.x) < 0.1 && rotationMode == "leftToOrigin")
+        {
+            rotationMode = "left";
+        }
+
+        if(rotationMode == "left")
+        {
+            transform.Rotate(leftRotateVector * Time.deltaTime);
+        } else if(rotationMode == "right")
+        {
+            transform.Rotate(rightRotateVector * Time.deltaTime);
+        } else
+        {
+            transform.Rotate(leftRotateVector * Time.deltaTime);
+        }
 
     }
 
